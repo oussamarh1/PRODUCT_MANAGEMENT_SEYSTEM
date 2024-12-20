@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crud.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="crud">
+    <div class="head">
+        <h1>Crud</h1>
+        <p>PRODUCT MANAGEMENT SEYSTEM</p>
+        
+    </div>
+
+    <div class="input">
+        <input type="text" placeholder="title" id="title">
+        <div class="price">
+            <input onkeyup="gettot()"  type="number" placeholder="price" id="price">
+            <input onkeyup="gettot()"  type="number" placeholder="taxes" id="taxes">
+            <input onkeyup="gettot()"  type="number" placeholder="ads" id="ads">
+            <input onkeyup="gettot()"  type="number" placeholder="discount" id="discount">
+            <small id="total">1233</small>
+        </div>
+        <input type="text" placeholder="count" id="count">
+        <input type="text" placeholder="category" id="category">
+        <button id="sumbit">create</button>
+    </div>
+    <div class="output">
+        <div class="serachblock">
+            <input onkeyup="searchData(this.value)" type="text" placeholder="serach" id="serach">
+            <div class="btnSerach">
+                <button onclick="getsearchMood(this.id)" id="serachTitle">Search title</button>
+                <button onclick="getsearchMood(this.id)" id="serachCategorie">Search category</button>
+
+            </div>
+        </div>
+      <div id="deleteAll"></div>
+      <table>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+        <tbody id="tbody">
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+    
+
+
+ <script src="crud.js"></script>   
+</body>
+</html>
